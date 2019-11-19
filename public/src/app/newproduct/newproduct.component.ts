@@ -8,7 +8,7 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
   styleUrls: ['./newproduct.component.css']
 })
 export class NewproductComponent implements OnInit {
-  newproduct: any = { name: "", quantity: 0, price: 0.0, myid: 0 };
+  newproduct: any = { name: "", quantity: 0, price: 0.0};
   submitted: boolean;
   servererrors: any;
   requestresult: any;
@@ -35,10 +35,8 @@ export class NewproductComponent implements OnInit {
       this.latest_id ++;
       console.log( "THE LATEST ID:",  this.latest_id )
     })
-
   }
   onSubmit() {
-    this.newproduct.myid = this.latest_id;
     console.log("mine: New Product", this.newproduct);
     this.submitted = true;
     let observable = this._httpService.newProduct(this.newproduct);
