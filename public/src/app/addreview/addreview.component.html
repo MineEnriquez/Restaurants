@@ -1,0 +1,24 @@
+<h3>Add review for {{restaurantname}}</h3>
+
+<div>
+    {{servererrors | json}}
+</div>
+<form #IsFormValid="ngForm">
+
+    <!-- <div class="error" *ngIf="nameCtrl.dirty && nameCtrl.invalid">Restaurant's name must be 3 or more chars </div> -->
+    <input  type="text" required name="rate.customer" id="rate.customer" [(ngModel)]="rate.customer" #nameCtrl="ngModel" class="text-primary">
+    
+    
+    <div class="form-group">
+        <select name="rate.rating" class="custom-select dropdown-item" required [(ngModel)]="rate.rating">
+            <option value="5" selected="">5 stars</option>
+            <option value="4">4 stars</option>
+            <option value="3">3 stars</option>
+            <option value="2">2 stars</option>
+            <option value="1">1 star</option>
+        </select>
+    </div>
+    <h5>Comments:</h5>
+    <textarea required name="rate.comment" id="rate.comment" [(ngModel)]="rate.comment" cols="30" rows="2"></textarea> <br>
+    <input [disabled]="IsFormValid.invalid" class="btn btn-primary" type="submit" (click)="rateRestaurant()" value="Rate!">
+</form>

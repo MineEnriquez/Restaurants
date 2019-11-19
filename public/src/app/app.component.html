@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  
+  <div class="container wrapper">
+    <h1>Let's eat</h1>
+    <button [routerLink]="['/restaurants/new']" class="btn btn-secondary">New Restaurant</button>
+
+    <select (change) ="resolveTheme($event)" name="theme" class="custom-select float-right themeSelect" >
+      <option value="minty" selected="">Minty</option>
+      <option value="united">United</option>
+      <option value="cosmo">Cosmo</option>
+      <option value="cerulean">Cerulean</option>
+      <option value="united">United</option>
+      <option value="yeti">Yeti</option>
+      <option value="spacelab">spacelab</option>
+      <option value="darkly">Darkly</option>
+      <option value="cyborg">Cyborg</option>
+      <option value="superhero">Superhero</option>
+  </select>
+  </div>
+  <div class="container wrapper">
+    <router-outlet></router-outlet>
+  </div>
+</body>
+
+</html>

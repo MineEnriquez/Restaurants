@@ -1,0 +1,44 @@
+<h3>Edit restaurant</h3>
+
+     <div>
+            {{servererrors | json}}
+     </div>
+<form #IsFormValid="ngForm">
+    <fieldset>
+        <div class="form-group">
+            <label for="name">Edit Restaurant name:</label>
+            <!-- Errors:{{name.errors | json}}
+            Valid:{{name.valid | json}} -->
+            <div class="error" *ngIf="nameCtrl.dirty && nameCtrl.invalid">Restaurant's name must be 3 or more chars </div>
+
+            <input type="text" 
+            class="form-control" 
+            name="name" 
+            id="name" 
+            required 
+            minlength="3"
+            maxlength="24" 
+            [(ngModel)]="editrestaurant.name" 
+            #nameCtrl="ngModel">
+        </div>
+
+        <div class="form-group">
+            <label for="cusine">Cusine:</label>
+            <!-- Errors:{{cusine.errors | json}}
+                Valid:{{cusine.valid | json}} -->
+            <div class="error" *ngIf="cusineCtrl.dirty && cusineCtrl.invalid">Cusine most be provided</div>
+            <input type="text" 
+            class="form-control" 
+            id="cusine" 
+            name="cusine" 
+            required 
+            minlength="1" 
+            maxlength="500"
+            [(ngModel)]="editrestaurant.cusine" 
+            #cusineCtrl="ngModel">
+        </div>
+    </fieldset>
+    <input (click)="onSubmit()" [disabled]="IsFormValid.invalid" class="btn btn-primary" type="submit" value="Update" />
+    <input (click)="onCancel()" class="btn btn-secondary" type="submit" value="Cancel" />
+
+</form>

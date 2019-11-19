@@ -1,0 +1,59 @@
+.wrapper {
+    width: 1000px;
+    border: lightgray solid 3px;
+    margin: 50px auto;
+    padding: 30px 30px;
+    align-items: center;
+    /* background: whitesmoke; */
+  }
+  .themeSelect{
+    width: 200px;
+    vertical-align: top;
+  }
+.cakeslist{
+    width: 700px;
+    height: 500px;
+    overflow: auto;
+}
+.cakeimg{
+    max-height: 200px;
+    max-width: 150px;
+}
+.cakelargerimage{
+    max-height: 300px;
+    max-width: 200px;
+}
+.cakeRow{
+    height: 220px;
+    padding: 10px;
+border: lightblue solid 3px;
+}
+.header{
+    background-color: #78C2AD;
+}
+.footer{
+    background-color: #78C2AD;
+    height: 400px;
+}
+.cakeInfo{
+    height: 200px;
+}
+.newCake{
+    border: white solid 2px;
+}
+.error{
+font-size: small;
+color: red;
+}
+.yellow{
+    color: goldenrod;
+}
+/* .ng-invalid { 
+    color: blue;
+}
+.ng-valid { 
+    color: green;}
+.ng-untouched { }
+.ng-touched { }
+.ng-dirty { }
+.ng-pristine { } */
