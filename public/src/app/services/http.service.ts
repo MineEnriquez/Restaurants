@@ -31,4 +31,22 @@ export class HttpService {
   e2endtest(num: any) {
     return this._http.post('/e2etest', num);
   }
+  
+  //Products
+  getProducts() {
+    return this._http.get('/api/products/retrieveall'); 
+  }
+  newProduct(data: any) {
+    return this._http.post('/api/products/newproduct', data); 
+  }
+  productDelete(id: any) {
+    return this._http.delete('/api/products/Delete/' + id);
+  }
+  productEdit(id:any, data: any) {
+    return this._http.post('/api/products/Update/'+ id, data);
+  }
+  getProductById(id:any) {
+    console.log("Get Product by Id", id);
+    return this._http.get('/api/products/retrieveId/' + id); /* Same with this one */
+  }
 }

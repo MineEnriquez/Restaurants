@@ -1,0 +1,18 @@
+<table style="width:100%">
+        <tr>
+          <td class="text-primary">Product</td>
+          <td>{{selectedproduct.name}}</td>
+        </tr>
+        <tr>
+                <td class="text-primary">Quantity</td>
+                <td>{{selectedproduct.quantity}}</td>
+              </tr>
+              <tr>
+                    <td class="text-primary">Price</td>
+                    <td>{{selectedproduct.price}}</td>
+                  </tr>
+                
+      </table>
+
+      <input (click)="onDelete()" [disabled]="isNotZero"  class="btn btn-primary" type="submit" value="Delete" />
+      <input (click)="onBack()" class="btn btn-secondary" type="submit" value="Back" />

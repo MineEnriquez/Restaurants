@@ -14,6 +14,10 @@ import { NewrestaurantComponent } from './newrestaurant/newrestaurant.component'
 import { ReviewsComponent } from './reviews/reviews.component';
 import { AddreviewComponent } from './addreview/addreview.component';
 import { EditrestaurantComponent } from './editrestaurant/editrestaurant.component';
+import { RetriveallproductsComponent } from './retriveallproducts/retriveallproducts.component';
+import { NewproductComponent } from './newproduct/newproduct.component';
+import { EditproductComponent } from './editproduct/editproduct.component';
+import { DisplayproductComponent } from './displayproduct/displayproduct.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,11 @@ import { EditrestaurantComponent } from './editrestaurant/editrestaurant.compone
     NewrestaurantComponent,
     ReviewsComponent,
     AddreviewComponent,
-    EditrestaurantComponent
+    EditrestaurantComponent,
+    RetriveallproductsComponent,
+    NewproductComponent,
+    EditproductComponent,
+    DisplayproductComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +39,7 @@ import { EditrestaurantComponent } from './editrestaurant/editrestaurant.compone
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [HttpService],
+  providers: [HttpService, RetriveallproductsComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

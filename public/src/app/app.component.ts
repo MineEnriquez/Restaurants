@@ -18,9 +18,11 @@ export class AppComponent implements OnInit {
     private _router: Router
   ) {}
   ngOnInit(){
-    this._router.navigate(['/restaurants']);
+    // this._router.navigate(['/restaurants']); // first exam
+   this._router.navigate(['/products']);
    this.setTheme("minty"); 
   }
+
   resolveTheme(event: Event){
       let theElement = <HTMLInputElement>event.target;
       this.setTheme(theElement.value);
