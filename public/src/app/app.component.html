@@ -11,10 +11,6 @@
 <body>
   
   <div class="container wrapper">
-    <!-- <h1>Let's eat</h1> -->
-    <!-- <button [routerLink]="['/restaurants/new']" class="btn btn-secondary">New Restaurant</button> -->
-    
-    <p class="float-right">Theme</p>
     <select (change) ="resolveTheme($event)" name="theme" class="custom-select float-right themeSelect" >
       <option value="minty" selected="">Minty</option>
       <option value="united">United</option>
@@ -27,8 +23,8 @@
       <option value="cyborg">Cyborg</option>
       <option value="superhero">Superhero</option>
     </select><br><br>
-    <button [routerLink]="['/products/new']" class="btn btn-secondary float-right">Add new product</button> <br>
     <h1>Commerce Manager</h1>
+    <button [routerLink]="['/products/new']" class="btn btn-secondary float-right">Add new product</button> <br>
   </div>
   <div class="container wrapper">
     <router-outlet></router-outlet>

@@ -14,9 +14,15 @@
             <td class="text-info">{{product.name}} </td>
             <td class="text-info">{{product.quantity}}</td>
             <td class="text-info">${{product.price}}</td>
-            <td>
-                <button (click) = "edit(i)" class="btn btn-success">Update</button> - 
-                <button (click) = "display(i)" class="btn btn-secondary">Details</button> - 
+            <td class="buttonsCol">
+                    <div class="row justify-content-start">
+                            <div class="col-sm-auto">
+                                <button (click) = "edit(i)" class="btn btn-success">Update</button>
+                            </div>
+                            <div class="col-sm-auto">
+                                <button (click) = "display(i)" class="btn btn-secondary">Details</button>
+                            </div>
+                          </div>   
                 <!-- <button [disabled]="product.deleteDisabled" (click) = "delete(i)" class="btn btn-danger">Details</button> -->
             </td>
         </tr>

@@ -93,7 +93,7 @@ export class EditproductComponent implements OnInit {
       }
     }
   }
-  onCancel() {
+  onBack() {
     this._router.navigate(['/products']);
   }
   onReset(){

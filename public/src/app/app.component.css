@@ -1,5 +1,6 @@
 .wrapper {
-    width: 1000px;
+    width: 50%;
+    min-width: min-content;
     min-height: 110px;
     border: lightgray solid 3px;
     margin: 50px auto;

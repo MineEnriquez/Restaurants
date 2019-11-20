@@ -74,7 +74,7 @@ export class NewproductComponent implements OnInit {
       }
     }
   }
-  onCancel() {
+  onBack() {
     this._router.navigate(['/products']);
   }
 }

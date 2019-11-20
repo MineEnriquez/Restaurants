@@ -14,7 +14,7 @@
             id="newproduct.name" 
             required 
             minlength="3"
-            maxlength="24" 
+            maxlength="150" 
             [(ngModel)]="newproduct.name" 
             #productNameCtrl="ngModel">
         </div>
@@ -49,5 +49,6 @@
     </fieldset>
     <input (click)="onSubmit()" [disabled]="IsFormValid.invalid || quantityInvalid || priceInvalid"  class="btn btn-primary" type="submit" value="Create" />
     <input (click)="onCancel()" class="btn btn-secondary" type="submit" value="Reset" />
+    <input (click)="onBack()" class="btn btn-info" type="submit" value="Back" />
 
 </form>
